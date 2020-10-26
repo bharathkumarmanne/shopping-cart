@@ -11,7 +11,7 @@ export default class ProductList extends Component {
   };
 
   componentDidMount() {
-    fetch('https://bharathkumarmanne.github.io/shopping-cart/products.json')
+    fetch('https://bharathkumarmanne.github.io/shopping-app/products.json')
       .then((response) => response.json())
       .then((data) => {
         const formattedData = data.map((item) => ({
