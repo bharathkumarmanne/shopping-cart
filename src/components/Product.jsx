@@ -48,7 +48,7 @@ function Product({ products, handleAdd, handleDelete }) {
                   >
                     -
                   </button>
-                  <div className='no badge badge-primary'>{numberOfItems}</div>
+                  <div className='p-2'>{numberOfItems}</div>
                   <button
                     className='btn btn-primary'
                     onClick={() => handleAdd(id)}

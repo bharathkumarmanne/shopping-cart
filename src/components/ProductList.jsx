@@ -26,30 +26,21 @@ export default class ProductList extends Component {
 
   addToCart = (id) => {
     const productCopy = [...this.state.products];
-    // const itemExists = productCopy.find((item) => {
-    //   return item.id === id;
-    // });
     const index = productCopy.findIndex((item) => {
       return item.id === id;
     });
-    // if (itemExists) {
     productCopy[index].numberOfItems += 1;
     productCopy[index].addedToCart = true;
     this.setState({
       products: productCopy,
     });
-    // }
   };
 
   deleteFromCart = (id) => {
     const productCopy = [...this.state.products];
-    const itemExists = productCopy.find((item) => {
-      return item.id === id;
-    });
     const index = productCopy.findIndex((item) => {
       return item.id === id;
     });
-    if (itemExists) {
       productCopy[index].numberOfItems -= 1;
       if (productCopy[index].numberOfItems === 0) {
         productCopy[index].addedToCart = false;
@@ -57,10 +48,8 @@ export default class ProductList extends Component {
       this.setState({
         products: productCopy,
       });
-    }
   };
   clearCart = () => {
-    // const cart = productsCopy.filter((product) => product.addedToCart === true);
     const clearedProducts = this.state.products.map((item) => ({
       ...item,
       numberOfItems: 0,
@@ -80,7 +69,6 @@ export default class ProductList extends Component {
 
   render() {
     const products = this.state.products;
-    console.log(products);
     const cart = products.filter((product) => product.addedToCart === true);
 
     let total = cart.reduce(function (prev, cur) {
@@ -102,7 +90,7 @@ export default class ProductList extends Component {
         <div className="product-list">
           <div className="container">
             <div className="products-container bg-white">
-              <h2 className="text-center">Product List</h2>
+              <h2 className="text-center">Products List</h2>
               {this.state.products.length === 0 ? (
                 <Spinner></Spinner>
               ) : (

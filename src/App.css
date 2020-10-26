@@ -11,9 +11,8 @@
     --main-color: #fdc535;
     --secondary-color: #e9a3a6;
     --main-text-color: #000;
-    --gradient: linear-gradient(to right, #48b1bf, #06beb6);
-    --gradient-chrome: -webkit-linear-gradient(to right, #48b1bf, #06beb6);
-    --purple: purple;
+    --gradient: #f8f9fa;
+    --purple: cadetblue;
   }
   
   .bg-white {
@@ -46,6 +45,7 @@
   img {
     width: 100%;
     display: block;
+    height: 180px;
   }
   
   .d-flex {
@@ -100,7 +100,7 @@
     color: #fff;
   }
   .badge-primary {
-    background-color: var(--main-color);
+    background-color: green;
   }
   
   .badge-success {
@@ -120,7 +120,7 @@
     opacity: 0.5;
   }
   .btn-primary {
-    background-color: var(--main-color);
+    background-color: green;
     color: #fff;
   }
   
@@ -137,6 +137,7 @@
     padding: 20px;
     margin: 50px 0;
     border-radius: 4px;
+    border: 1px solid lightgray;
   }
   
   .overlay {
@@ -226,6 +227,9 @@
     content: "x";
     border: none;
     cursor: pointer;
+  }
+  .p-2 {
+    padding: .5rem;
   }
   
   /* Mobile Responsive */
